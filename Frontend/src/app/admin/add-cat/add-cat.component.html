@@ -1,0 +1,32 @@
+<div class="card">
+
+    <div class="card-header">
+        <h1 class="m-0 text-dark" >Add Category</h1>
+    </div>
+
+    <div class="card-body">
+   
+    <form [formGroup]="catForm" (ngSubmit)="catAdd()">
+        
+        <div class="form-goup">
+            <label>Category Name</label>
+            <input type="text" class="form-control" formControlName="catname">   
+        </div>
+        <div class="form-group">
+            <label>Category Description</label>
+            <input type="text"  class="form-control" formControlName="desc">
+        </div>
+        <div class="form-group">
+            <label>Date</label>
+            <input type="date"  class="form-control" formControlName="date">
+        </div>
+        <div class="form-group">
+            <label>Image</label>
+            <input type="file"  class="form-control" (change)=addImage($event)>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Category</button>
+    </form>
+
+    </div>
+   
+</div>
